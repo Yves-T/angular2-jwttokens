@@ -1,0 +1,41 @@
+<div class="container">
+  <header>
+    <h1 class="title">Angular 2 HTTP</h1>
+  </header>
+
+  <section>
+    <h2>Login</h2>
+    <div *ngIf="loginOk">
+      <div class="alert alert-success" role="alert">User is logged in!</div>
+    </div>
+    <div *ngIf="loginFail">
+      <div class="alert alert-danger" role="alert">User authentication was not OK!</div>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" required [(ngModel)]="model.userName">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" [(ngModel)]="model.password">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Random Quote</h2>
+    <hr>
+    <h3>{{randomQuote}}</h3>
+    <button (click)="getRandomQuote()" class="btn btn-success">Get Random Quote!</button>
+  </section>
+
+  <section>
+    <h2>Secret Quote</h2>
+    <hr>
+    <h3>{{secretQuote}}</h3>
+    <button (click)="getSecretQuote()" class="btn btn-success">Get Secret Quote!</button>
+  </section>
+
+</div>

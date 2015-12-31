@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect');
 var webpack = require('webpack-stream');
+var del = require('del');
 
 gulp.task('connect', ['copy'], function() {
   connect.server({
@@ -23,6 +24,12 @@ gulp.task('copy', function() {
     })
     .pipe(gulp.dest('./build'))
   ;
+});
+
+gulp.task('clear', function () {
+  return del([
+    'build/**/*'
+  ]);
 });
 
 gulp.task('build', ['scripts', 'copy']);
