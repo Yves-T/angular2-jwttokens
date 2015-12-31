@@ -87,3 +87,9 @@ app.post('/sessions/create', function(req, res) {
     id_token: createToken(user)
   });
 });
+
+app.get('/', function (req, res) {
+  res.sendFile('/build/index.html', {root: __dirname});
+});
+
+app.use(express.static(__dirname + '/build'));
