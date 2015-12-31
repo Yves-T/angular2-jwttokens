@@ -53,15 +53,15 @@ It returns a String with a Random quote from Chuck Norris. It doesn't require au
 
 #### GET `/api/protected/random-quote`
 
-It returns a String with a Random quote from Chuck Norris. It requires authentication. 
+It returns a String with a Random quote from Chuck Norris. It requires authentication.
 
 The JWT must be sent on the `Authorization` header as follows: `Authorization: Bearer {jwt}`
 
 ## Running it
 
-Just clone the repository, run `npm install` and then `node server.js`. That's it :).
+Just clone the repository, run `npm install` and then `node index.js`. That's it :).
 
-If you want to run it on another port, just run `PORT=3001 node server.js` to run it on port 3001 for example
+If you want to run it on another port, just run `PORT=3001 node index.js` to run it on port 3001 for example
 
 ## Issue Reporting
 
